@@ -11,13 +11,10 @@ FACTION.runSounds = {[0] = "NPC_MetroPolice.RunFootstepLeft", [1] = "NPC_MetroPo
 
 function FACTION:OnCharacterCreated(client, character)
 	local inventory = character:GetInventory()
-
-	inventory:Add("pistol", 1)
-	inventory:Add("pistolammo", 2)
 end
 
 function FACTION:GetDefaultName(client)
-	return "MPF-RCT." .. Schema:ZeroNumber(math.random(1, 99999), 5), true
+	return "C13.RCT.TAGLINE" .. Schema:ZeroNumber(math.random(1, 9), 1), true
 end
 
 function FACTION:OnTransfered(client)
